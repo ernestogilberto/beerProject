@@ -13,32 +13,12 @@
     align-items      : center;
 }
 
-.navbar img {
+.navbar .logo {
     width         : 2rem;
     height        : 2rem;
     margin-inline : 1rem;
-    padding       : .25rem;
-    border        : 1px solid var(--primary);
+    border        : none;
+    padding       : 0;
     border-radius : 50%;
     box-sizing    : border-box;
-}
-
-.navbar .logo {
-    border  : none;
-    padding : 0;
-}
-
-.navbar ul {
-    display : flex;
-    gap     : 1rem;
-}
-
-.navbar li {
-    font-weight : bold;
-    display     : inline-block;
-}
-
-.navbar a {
-    color           : var(--primary);
-    text-decoration : none;
 }

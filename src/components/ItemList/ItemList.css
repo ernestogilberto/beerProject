@@ -1,0 +1,13 @@
+.item {
+    font-weight : bold;
+    display     : inline-block;
+}
+
+.item a {
+    color           : var(--primary);
+    text-decoration : none;
+}
+
+.item a:hover {
+    text-decoration : underline;
+}
