@@ -1,13 +1,4 @@
-.item {
-    font-weight : bold;
-    display     : inline-block;
-}
-
-.item a {
-    color           : var(--primary);
-    text-decoration : none;
-}
-
-.item a:hover {
-    text-decoration : underline;
+.item-list {
+    background-color : rgba(255, 0, 0, 0.3);
+    height           : 10rem;
 }
