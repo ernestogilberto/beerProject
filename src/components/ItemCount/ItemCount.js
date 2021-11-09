@@ -21,7 +21,7 @@ const ItemCount = (props) => {
   const substract = (item) => {
     setAdded(false);
 
-    if (quantity > 0) {
+    if (quantity > props.initial) {
       setQuantity(quantity - 1)
     }
   }
@@ -29,7 +29,7 @@ const ItemCount = (props) => {
   return (
       <>
         <button onClick={substract}>-</button>
-        <input type="text" placeholder="0" value={quantity} readOnly/>
+        <input type="text" placeholder={props.initial} value={quantity} readOnly/>
         <button onClick={add}>+</button>
         {quantity > 0 && <button className="addToCart" onClick={toAdd}>Añadir al carro</button>}
         {added && <p id="added">Añadidas {quantity} al carrito.</p>}
