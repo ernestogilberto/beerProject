@@ -7,7 +7,7 @@ import LinksListContainer from '../LinksListContainer/LinksListContainer.js';
 const NavBar = () => {
   return (
       <nav className="navbar">
-        <a href="#">
+        <a href="#home">
           <img src={logo} alt="" className="logo"/>
         </a>
         <LinksListContainer/>

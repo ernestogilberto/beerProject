@@ -1,6 +1,6 @@
 .items-list-container {
     display               : grid;
-    gap                   : .5rem;
+    gap                   : 1rem;
     margin                : .5rem;
     padding               : .5rem;
     grid-template-columns : repeat(auto-fit, minmax(18rem, 1fr));

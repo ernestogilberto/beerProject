@@ -1,0 +1,18 @@
+.search-bar {
+    display           : flex;
+    justify-content   : right;
+    margin-inline-end : 1rem;
+    margin-block      : 2rem;
+}
+
+.search-bar * {
+    display             : flex;
+    justify-content     : center;
+    text-align          : center;
+    margin-inline-start : 1rem;
+    border-radius       : .25rem;
+}
+
+.error {
+    text-align : center;
+}

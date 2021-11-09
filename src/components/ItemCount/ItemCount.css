@@ -1,0 +1,24 @@
+.info-price input {
+    width      : 2rem;
+    text-align : center;
+}
+
+.info-price button {
+    background-color : rgba(102, 75, 58, .8);
+    color            : rgba(230, 165, 46, 1);
+    font-weight      : bold;
+}
+
+.info-price .addToCart {
+    margin-left      : 1rem;
+    background-color : rgba(102, 75, 58, .7);
+    color            : rgba(230, 165, 46, 1);
+    font-weight      : bold;
+}
+
+#added {
+    font-weight : bold;
+    text-align  : center;
+    box-sizing  : border-box;
+    margin-top  : .5rem;
+}

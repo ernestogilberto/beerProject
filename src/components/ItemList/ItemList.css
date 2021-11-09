@@ -1,4 +1,53 @@
 .item-list {
-    background-color : rgba(255, 0, 0, 0.3);
-    height           : 10rem;
+    max-height     : 22rem;
+    max-width      : 25rem;
+    display        : grid;
+    grid-auto-rows : auto 2fr;
+    border-radius  : .5rem;
+    box-shadow     : 0 0 .5rem rgba(102, 75, 58, .8);
+    color          : rgba(102, 75, 58, 1);
+}
+
+.item-list img {
+    max-height   : 10rem;
+    justify-self : center;
+}
+
+.item-list h1 {
+    font-size  : 1.2rem;
+    text-align : center;
+}
+
+.item-list p {
+    height        : 3rem;
+    text-overflow : ellipsis;
+}
+
+.item-list .price {
+    font-size   : 1rem;
+    text-align  : right;
+    font-weight : bold;
+}
+
+.item-list .price:before {
+    content : "$ ";
+}
+
+.item-list-info {
+    background              : rgba(230, 165, 46, .5);
+    border-end-start-radius : .5rem;
+    border-end-end-radius   : .5rem;
+    padding                 : .5rem;
+    overflow                : hidden;
+}
+
+.info-price {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : flex-start;
+}
+
+.info-price p {
+    align-self : flex-start;
+    margin-top : -.1rem;
 }
