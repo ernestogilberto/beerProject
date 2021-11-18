@@ -1,0 +1,22 @@
+.items-detail-container{
+    position: absolute;
+    background-color: lightblue;
+    height:500px;
+    width:500px;
+    border-radius: 10px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close{
+    font-weight: bold;
+    font-size: 30px;
+    margin-block-start: 10px;
+    margin-inline-end: 220px;
+    justify-self: flex-end;
+    align-self: flex-start;
+    z-index: 101;
+    cursor: pointer;
+}
