@@ -7,7 +7,7 @@ function App() {
   return (
       <>
         <NavBar/>
-        <SearchBar beers={beers} />
+        <SearchBar beers={beers}/>
       </>
   );
 }

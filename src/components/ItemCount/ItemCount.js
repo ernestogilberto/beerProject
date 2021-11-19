@@ -1,5 +1,5 @@
 import './ItemCount.css'
-import React from "react";
+import React from 'react';
 
 const ItemCount = (props) => {
 
@@ -10,7 +10,7 @@ const ItemCount = (props) => {
     setAdded(true);
   }
 
-  const add = (item) => {
+  const add = () => {
     setAdded(false);
 
     if (quantity < props.stock) {
@@ -18,7 +18,7 @@ const ItemCount = (props) => {
     }
   }
 
-  const substract = (item) => {
+  const subtract = () => {
     setAdded(false);
 
     if (quantity > props.initial) {
@@ -28,7 +28,7 @@ const ItemCount = (props) => {
 
   return (
       <>
-        <button onClick={substract}>-</button>
+        <button onClick={subtract}>-</button>
         <input type="text" placeholder={props.initial} value={quantity} readOnly/>
         <button onClick={add}>+</button>
         {quantity > 0 && <button className="addToCart" onClick={toAdd}>Añadir al carro</button>}

@@ -1,5 +1,5 @@
-import ItemDetail from "../ItemDetail/ItemDetail.js";
-import React, {useEffect} from "react";
+import ItemDetail from '../ItemDetail/ItemDetail.js';
+import React, {useEffect} from 'react';
 import './ItemDetailContainer.css'
 
 
@@ -11,7 +11,7 @@ const ItemsDetailContainer = (props) => {
     setDetail(!detail);
   }
 
-  const [item , setItem] = React.useState({});
+  const [item, setItem] = React.useState({});
 
   const getItem = (timeout, item) => {
     return new Promise((resolve, reject) => {
@@ -25,7 +25,7 @@ const ItemsDetailContainer = (props) => {
     });
   }
 
-  useEffect (() => {
+  useEffect(() => {
     getItem(2000, props).then(item => {
       setItem(item);
     }).catch(error => {

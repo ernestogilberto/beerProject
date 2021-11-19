@@ -1,10 +1,10 @@
-import React, {useEffect} from "react";
+import React, {useEffect} from 'react';
 import './ItemsListContainer.css'
 import ItemList from '../ItemList/ItemList.js';
 
 const ItemsListContainer = (props) => {
 
-  const [beers , setBeers] = React.useState([]);
+  const [beers, setBeers] = React.useState([]);
 
   const getBeers = (timeout, items) => {
     return new Promise((resolve, reject) => {
@@ -18,7 +18,7 @@ const ItemsListContainer = (props) => {
     });
   }
 
-  useEffect (() => {
+  useEffect(() => {
     getBeers(2000, props.beers).then(items => {
       setBeers(items);
     }).catch(error => {
@@ -30,7 +30,7 @@ const ItemsListContainer = (props) => {
       <>
         <div className="items-list-container">
           {beers.map((beer, index) => <ItemList key={index} name={beer.name} description={beer.description}
-                                                      img={beer.img} price={beer.price} stock={beer.stock}/>)
+                                                img={beer.img} price={beer.price} stock={beer.stock}/>)
           }
         </div>
       </>
