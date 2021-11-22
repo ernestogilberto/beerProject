@@ -2,25 +2,25 @@ import React from 'react';
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
 
-const ItemsList = ({item}) => {
+const ItemsList = ({img, name, description, stock, price}) => {
 
   return (
       <>
         <div className="item">
-          <img src={item.img} alt={item.name}/>
+          <img src={img} alt={name}/>
           <div className="item-info">
             <div className="info">
-              <h1>{item.name}</h1>
-              <p>{item.description}</p>
+              <h1>{name}</h1>
+              <p>{description}</p>
             </div>
             <div className="info-price">
               <div className="buy">
                 <ItemCount
-                    stock={item.stock}
+                    stock={stock}
                     initial={0}
                 />
               </div>
-              <p className="price">{item.price}</p>
+              <p className="price">{price}</p>
             </div>
           </div>
         </div>

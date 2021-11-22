@@ -6,7 +6,7 @@ const ItemsList = ({beers}) => {
 
   return (
       <>
-        {beers.map((beer, index) => <Item key={index} item={beer}/>)
+        {beers.map((beer, index) => <Item key={index} {...beer}/>)
         }
       </>
   )
