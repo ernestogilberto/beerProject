@@ -1,37 +1,36 @@
 import React, {useEffect} from 'react';
 import './ItemsListContainer.css'
 import ItemList from '../ItemList/ItemList.js';
+import SearchBar from '../SearchBar/SearchBar';
+import {useParams} from 'react-router-dom';
+import beers from '../../beers'
 
-const ItemsListContainer = (props) => {
+const ItemsListContainer = () => {
 
-  const [beers, setBeers] = React.useState([]);
+  const [currentBeers, setCurrentBeers] = React.useState([]);
+  const {categoryId} = useParams();
 
   const getBeers = (timeout, items) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
-        if (items.length > 0) {
-          resolve(items);
-        } else {
-          reject(new Error('No items'));
-        }
+        categoryId ? resolve(items.filter(item => item.category === categoryId)) : resolve(items);
       }, timeout);
     });
   }
 
   useEffect(() => {
-    getBeers(2000, props.beers).then(items => {
-      setBeers(items);
+    getBeers(2000, beers).then(items => {
+      setCurrentBeers(items);
     }).catch(error => {
       console.log(error);
     });
-  }, [props.beers]);
+  }, [categoryId]);
 
   return (
       <>
+        <SearchBar beers={currentBeers}/>
         <div className="items-list-container">
-          {beers.map((beer, index) => <ItemList key={index} name={beer.name} description={beer.description}
-                                                img={beer.img} price={beer.price} stock={beer.stock}/>)
-          }
+          <ItemList beers={currentBeers}/>
         </div>
       </>
   )

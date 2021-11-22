@@ -1,6 +1,5 @@
 import React from 'react';
 import './SearchBar.css';
-import ItemsListContainer from '../ItemsListContainer/ItemsListContainer.js';
 
 const SearchBar = (props) => {
 
@@ -26,8 +25,6 @@ const SearchBar = (props) => {
             </label>
           </form>
         </div>
-        {beers.length > 0 ? <ItemsListContainer beers={beers}/> :
-            <div id="error"><h1 className="error">Producto no encontrado</h1></div>}
       </>
   )
 }

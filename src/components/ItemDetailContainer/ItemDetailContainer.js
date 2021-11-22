@@ -1,45 +1,37 @@
 import ItemDetail from '../ItemDetail/ItemDetail.js';
 import React, {useEffect} from 'react';
 import './ItemDetailContainer.css'
+import {useParams} from 'react-router-dom';
+import beers from '../../beers'
 
 
-const ItemsDetailContainer = (props) => {
+const ItemsDetailContainer = () => {
 
-  const [detail, setDetail] = React.useState(true);
-
-  const clicked = () => {
-    setDetail(!detail);
-  }
+  const {idItem} = useParams();
 
   const [item, setItem] = React.useState({});
 
-  const getItem = (timeout, item) => {
-    return new Promise((resolve, reject) => {
+  const getItem = (timeout, items) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
-        if (item) {
-          resolve(item);
-        } else {
-          reject(new Error('No item'));
-        }
+        resolve(items.find(beer => beer.id === parseInt(idItem)))
       }, timeout);
     });
   }
 
   useEffect(() => {
-    getItem(2000, props).then(item => {
+    getItem(2000, beers).then(item => {
       setItem(item);
     }).catch(error => {
       console.log(error);
     });
-  }, []);
+  },);
 
   return (
       <>
-        {detail && <div className="items-detail-container">
-          <ItemDetail key={item.index} name={item.name} description={item.description}
-                      img={item.img} price={item.price} stock={item.stock}/>
-        </div>}
-        {detail && <span className="close" onClick={clicked}>X</span>}
+        <div className="items-detail-container">
+          <ItemDetail item={item}/>
+        </div>
       </>
   )
 }

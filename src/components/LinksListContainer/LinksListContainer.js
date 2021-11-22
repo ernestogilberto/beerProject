@@ -2,10 +2,10 @@ import React from 'react';
 import './LinksListContainer.css'
 import LinkListItem from '../LinkList/LinkListItem.js';
 
-const links = [{text: 'Nacionales', url: '#nacionales'},
-  {text: 'Extranjeras', url: '#extranjeras'},
-  {text: 'Artesanales', url: '#artesanales'},
-  {text: 'Conocenos', url: '#conocenos'}
+const links = [{text: 'Nacionales', url: 'nacionales'},
+  {text: 'Extranjeras', url: 'extranjeras'},
+  {text: 'Artesanales', url: 'artesanales'},
+  {text: 'Conocenos', url: 'conocenos'}
 ]
 
 const LinksListContainer = () => {

@@ -1,13 +1,9 @@
-.item {
+.link-item {
     font-weight : bold;
     display     : inline-block;
+    color       : var(--primary);
 }
 
-.item a {
-    color           : var(--primary);
-    text-decoration : none;
-}
-
-.item a:hover {
+.link-item:hover {
     text-decoration : underline;
 }
