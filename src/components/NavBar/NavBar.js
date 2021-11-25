@@ -10,7 +10,7 @@ const NavBar = () => {
       <nav className="navbar">
         <Link to={`/`}><img src={logo} alt="" className="logo"/></Link>
         <LinksListContainer/>
-        <CartWidget/>
+        <Link to={`/cart`}><CartWidget/></Link>
       </nav>
   )
 }

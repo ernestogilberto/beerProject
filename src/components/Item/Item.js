@@ -24,7 +24,7 @@ const Item = ({img, name, description, stock, price, id}) => {
               <div className="buy">
                 <ItemCount
                     stock={stock}
-                    initial={0}
+                    initial={1}
                 />
               </div>
               <p className="price">{(price.toFixed(2))}</p>
