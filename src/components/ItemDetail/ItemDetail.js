@@ -1,8 +1,15 @@
 import React from 'react';
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
+import {Link} from 'react-router-dom';
 
-const ItemsList = ({img, name, description, stock, price}) => {
+const ItemDetail = ({img, name, description, stock, price}) => {
+
+  const [itemCount, setItemCount] = React.useState(0);
+
+  const onAdd = (quantity) => {
+    setItemCount(itemCount + quantity);
+  }
 
   return (
       <>
@@ -15,10 +22,9 @@ const ItemsList = ({img, name, description, stock, price}) => {
             </div>
             <div className="info-price">
               <div className="buy">
-                <ItemCount
-                    stock={stock}
-                    initial={0}
-                />
+                {itemCount === 0 ? <ItemCount stock={stock} initial={itemCount} onAdd={onAdd}/> : <Link to={`/cart`}>
+                  <button className="addToCart">Checkout</button>
+                </Link>}
               </div>
               <p className="price">{price}</p>
             </div>
@@ -28,4 +34,4 @@ const ItemsList = ({img, name, description, stock, price}) => {
   )
 }
 
-export default ItemsList;
+export default ItemDetail;
