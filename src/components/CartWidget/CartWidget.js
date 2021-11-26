@@ -6,10 +6,8 @@ const CartWidget = () => {
 
   return (
       <>
-        <a href="#cart">
-          <img src={cart} alt="" className="cart"/>
-          <span className="counter">5</span>
-        </a>
+        <img src={cart} alt="" className="cart"/>
+        <span className="counter">5</span>
       </>
   )
 }

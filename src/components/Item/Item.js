@@ -4,16 +4,10 @@ import {Link} from 'react-router-dom';
 
 const Item = ({img, name, description, stock, price, id}) => {
 
-  const [detail, setDetail] = React.useState(false);
-
-  const clicked = () => {
-    setDetail(!detail);
-  }
-
   return (
       <>
         <div className="item">
-          <img src={img} alt={name} onClick={clicked}/>
+          <img src={img} alt={name}/>
           <div className="item-info">
             <div className="info">
               <h1>{name.toUpperCase()}</h1>

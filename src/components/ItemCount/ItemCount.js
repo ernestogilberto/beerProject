@@ -4,19 +4,14 @@ import React from 'react';
 const ItemCount = (props) => {
 
   const [quantity, setQuantity] = React.useState(0);
-  const [added, setAdded] = React.useState(false);
 
   const add = () => {
-    setAdded(false);
-
     if (quantity < props.stock) {
       setQuantity(quantity + 1)
     }
   }
 
   const subtract = () => {
-    setAdded(false);
-
     if (quantity > props.initial) {
       setQuantity(quantity - 1)
     }
