@@ -9,7 +9,7 @@
     position      : relative;
 }
 
-.counter {
+.cart-quantity {
     width            : 1rem;
     height           : 1rem;
     text-align       : center;

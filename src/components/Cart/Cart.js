@@ -8,6 +8,8 @@ const Cart = () => {
   const context = useContext(CartContext);
   const {deleteAll} = context;
   const {deleteItem} = context;
+  const {totalItem} = context;
+  const {total} = context;
 
   return (
       <div className="cart-container">
@@ -26,10 +28,12 @@ const Cart = () => {
                     <h2>Cantidad: {item.quantity}</h2>
                     <h3>Item: {item.name}</h3>
                     <p>Precio unitario: ${item.price.toFixed(2)}</p>
+                    <h4>Total producto: ${totalItem(item.id).toFixed(2)}</h4>
                     <button className="delete-btn" onClick={() => deleteItem(item.id)}>Eliminar</button>
                   </div>
                 </div>))
         ) : <h1 className="empty-cart">No hay items en el carrito</h1>}
+        <h1>Total: $ {total().toFixed(2)}</h1>
         {context.cartList.length > 0 && <button className="deleteAll-btn" onClick={deleteAll}>Vaciar Carrito</button>}
       </div>
   );

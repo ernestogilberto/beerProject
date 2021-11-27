@@ -1,13 +1,17 @@
 import React from 'react';
 import cart from '../../assets/icons/cart.svg';
 import './CartWidget.css'
+import {CartContext} from '../CartContext';
 
 const CartWidget = () => {
+
+  const context = React.useContext(CartContext);
+  const {totalQuantity} = context;
 
   return (
       <>
         <img src={cart} alt="" className="cart"/>
-        <span className="counter">5</span>
+        {totalQuantity() > 0 && <span className="cart-quantity">{totalQuantity()}</span>}
       </>
   )
 }
