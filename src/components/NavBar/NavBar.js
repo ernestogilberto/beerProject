@@ -8,9 +8,9 @@ import {Link} from 'react-router-dom';
 const NavBar = () => {
   return (
       <nav className="navbar">
-        <Link to={`/`}><img src={logo} alt="" className="logo"/></Link>
+        <Link to={`/`}><img src={logo} alt="" className="logo"/> </Link>
         <LinksListContainer/>
-        <Link to={`/cart`}><CartWidget/></Link>
+        <Link to={`/cart`}><CartWidget/> </Link>
       </nav>
   )
 }

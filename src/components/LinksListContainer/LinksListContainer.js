@@ -11,9 +11,9 @@ const links = [{text: 'Nacionales', url: 'nacionales'},
 const LinksListContainer = () => {
   return (
       <>
-        <ul className="listContainer">
+        <div className="listContainer">
           {links.map((link, index) => <LinkListItem key={index} text={link.text} url={link.url}/>)}
-        </ul>
+        </div>
       </>
   )
 }

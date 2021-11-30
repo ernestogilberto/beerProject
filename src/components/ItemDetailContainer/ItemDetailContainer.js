@@ -2,7 +2,7 @@ import ItemDetail from '../ItemDetail/ItemDetail.js';
 import React, {useEffect} from 'react';
 import './ItemDetailContainer.css'
 import {useParams} from 'react-router-dom';
-import beers from '../../beers'
+import fetchData from '../../utils/fetchData';
 
 
 const ItemsDetailContainer = () => {
@@ -11,21 +11,12 @@ const ItemsDetailContainer = () => {
 
   const [item, setItem] = React.useState({});
 
-  const getItem = (timeout, items) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(items.find(beer => beer.id === parseInt(idItem)))
-      }, timeout);
-    });
-  }
-
   useEffect(() => {
-    getItem(2000, beers).then(item => {
-      setItem(item);
-    }).catch(error => {
-      console.log(error);
-    });
-  },);
+
+    fetchData()
+        .then(r => setItem(r.find(item => item.id === idItem)))
+        .catch(e => console.log(e));
+  },[idItem]);
 
   return (
       <>

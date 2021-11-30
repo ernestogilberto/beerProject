@@ -1,7 +1,7 @@
 import React from 'react';
 import cart from '../../assets/icons/cart.svg';
 import './CartWidget.css'
-import {CartContext} from '../CartContext';
+import {CartContext} from '../contexts/CartContext';
 
 const CartWidget = () => {
 
