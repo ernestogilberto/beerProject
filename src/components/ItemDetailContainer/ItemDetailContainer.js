@@ -2,7 +2,7 @@ import ItemDetail from '../ItemDetail/ItemDetail.js';
 import React, {useEffect} from 'react';
 import './ItemDetailContainer.css'
 import {useParams} from 'react-router-dom';
-import fetchData from '../../utils/fetchData';
+import {getBeerById} from '../../utils/fetchData';
 
 
 const ItemsDetailContainer = () => {
@@ -12,11 +12,8 @@ const ItemsDetailContainer = () => {
   const [item, setItem] = React.useState({});
 
   useEffect(() => {
-
-    fetchData()
-        .then(r => setItem(r.find(item => item.id === idItem)))
-        .catch(e => console.log(e));
-  },[idItem]);
+    getBeerById(idItem).then(r => setItem(r))
+  }, [idItem]);
 
   return (
       <>

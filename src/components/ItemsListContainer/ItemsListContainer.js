@@ -11,9 +11,7 @@ const ItemsListContainer = () => {
   const {categoryId} = useParams();
 
   useEffect(() => {
-    fetchData()
-        .then(r => setCurrentBeers(categoryId ? r.filter(item => item.category === categoryId) : r))
-        .catch(e => console.log(e));
+    categoryId ? fetchData(categoryId).then(r => setCurrentBeers(r)) : fetchData().then(r => setCurrentBeers(r));
   }, [categoryId]);
 
   return (
