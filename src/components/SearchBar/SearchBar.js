@@ -4,12 +4,11 @@ import './SearchBar.css';
 const SearchBar = (props) => {
 
   const [keyword, setKeyword] = React.useState('');
-  const [beers, setBeers] = React.useState(props.beers);
 
   const submitHandler = (e) => {
     e.preventDefault();
     let filter = props.beers.filter(beer => beer.name.toLowerCase().includes(keyword.toLowerCase()));
-    setBeers(filter);
+    props.UpdateBySearch(filter);
   }
 
   return (
