@@ -1,9 +1,9 @@
 .items-detail-container {
-    height           : 500px;
-    width            : 500px;
-    border-radius    : 10px;
-    display          : flex;
-    text-align       : center;
-    justify-content  : center;
-    align-items      : center;
+    height          : 500px;
+    width           : 500px;
+    border-radius   : 10px;
+    display         : flex;
+    text-align      : center;
+    justify-content : center;
+    align-items     : center;
 }

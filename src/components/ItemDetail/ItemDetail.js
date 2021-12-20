@@ -25,11 +25,11 @@ const ItemDetail = ({id, img, name, description, stock, price}) => {
 
   return (
       <>
-        <div className="item">
+        <div className="detail-item">
           <img src={img} alt={name}/>
-          <div className="item-info">
-            <div className="info">
-              <h1>{name}</h1>
+          <div className="detail-item-info">
+            <div className="detail-info">
+              <h1 className="detail-title">{name}</h1>
               <p>{description}</p>
             </div>
             <div className="info-price">
@@ -38,7 +38,7 @@ const ItemDetail = ({id, img, name, description, stock, price}) => {
                   <button className="addToCart">Checkout</button>
                 </Link>}
               </div>
-              <p className="price">{price}</p>
+              {price && <p className="price">{price.toFixed(2)}</p>}
             </div>
           </div>
         </div>

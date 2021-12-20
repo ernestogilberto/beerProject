@@ -1,3 +1,64 @@
+.detail-item {
+    min-height     : 80vh;
+    width          : 80vw;
+    margin-top     : 7rem;
+    display        : grid;
+    grid-auto-rows : auto 2fr;
+    border-radius  : .5rem;
+    box-shadow     : 0 0 .5rem rgba(102, 75, 58, .8);
+    color          : rgba(102, 75, 58, 1);
+    position       : absolute;
+    left           : 50%;
+    transform      : translateX(-50%);
+}
+
+.detail-item img {
+    max-height   : 20rem;
+    justify-self : center;
+}
+
+.detail-item h1 {
+    font-size  : 1.2rem;
+    text-align : center;
+}
+
+.item p {
+    height : 3rem;
+    /*text-overflow : ellipsis;*/
+}
+
+.detail-item .price {
+    font-size   : 1rem;
+    text-align  : right;
+    font-weight : bold;
+}
+
+.detail-item .price:before {
+    content : "$ ";
+}
+
+.detail-item-info {
+    background              : rgba(230, 165, 46, .5);
+    border-end-start-radius : .5rem;
+    border-end-end-radius   : .5rem;
+    padding                 : 2rem;
+    overflow                : hidden;
+    display                 : flex;
+    flex-direction          : column;
+}
+
+.info {
+    min-height : 50%;
+}
+
+/*.info-price {*/
+/*    display         : flex;*/
+/*    flex: 1;*/
+/*    justify-content : space-between;*/
+/*    align-items     : flex-end;*/
+/*}*/
+
+
 .item {
     max-height     : 22rem;
     max-width      : 25rem;

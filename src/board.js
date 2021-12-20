@@ -1,1 +1,0 @@
-numero > 18 && console.log('si es')

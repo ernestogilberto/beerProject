@@ -3,7 +3,7 @@
     text-align : center;
 }
 
-.info-price button {
+button {
     background-color : rgba(102, 75, 58, .8);
     color            : rgba(230, 165, 46, 1);
     font-weight      : bold;

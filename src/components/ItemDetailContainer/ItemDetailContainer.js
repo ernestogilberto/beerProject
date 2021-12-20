@@ -12,7 +12,7 @@ const ItemsDetailContainer = () => {
   const [item, setItem] = React.useState({});
 
   useEffect(() => {
-    getBeerById(idItem).then(r => setItem(r))
+    getBeerById(idItem).then(r => setItem(r));
   }, [idItem]);
 
   return (
